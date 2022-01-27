@@ -44,12 +44,12 @@ class GetInput {
         return (input.length === 8 && input[2] === ':' && input[5] === ':' && !isNaN(hours) && !isNaN(minuts) && !isNaN(seconds) && hours >= 0 && hours <= 23 && minuts >= 0 && minuts <= 59 && seconds >= 0 && seconds <= 59);
     }
     isFutureTime(date, today, hours, minuts, seconds) {
-        if (date.toDateString() == today.toDateString()) {
+        if (date.toDateString() === today.toDateString()) {
             if (hours < today.getHours())
                 return false;
-            if (hours == today.getHours() && minuts < today.getMinutes())
+            if (hours === today.getHours() && minuts < today.getMinutes())
                 return false;
-            if (hours == today.getHours() && minuts == today.getMinutes() && seconds < today.getSeconds())
+            if (hours === today.getHours() && minuts === today.getMinutes() && seconds < today.getSeconds())
                 return false;
         }
         return true;

@@ -51,11 +51,11 @@ export class GetInput
 
     private isFutureTime (date : Date, today : Date, hours:number , minuts:number,seconds:number) : boolean
     {
-        if(date.toDateString() == today.toDateString())
+        if(date.toDateString() === today.toDateString())
         {
             if(hours< today.getHours()) return false;
-            if(hours == today.getHours() && minuts < today.getMinutes()) return false;
-            if(hours == today.getHours() && minuts == today.getMinutes() && seconds < today.getSeconds()) return false;
+            if(hours === today.getHours() && minuts < today.getMinutes()) return false;
+            if(hours === today.getHours() && minuts === today.getMinutes() && seconds < today.getSeconds()) return false;
         }
         return true;
     }
