@@ -17,7 +17,7 @@ export class Event
     return `name: ${this._name}, place: ${this._place}, date: ${this._date.toString().substring(0,this._date.toString().length-28)} `;
     }
     isToday () : boolean {
-        return(new Date().toDateString() == this._date.toDateString());
+        return(new Date().toDateString() === this._date.toDateString());
     }
     isLessThanToday () : boolean {
         return(new Date() > this._date );

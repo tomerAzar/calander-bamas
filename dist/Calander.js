@@ -38,7 +38,7 @@ class Calander {
                 sumOfEventsToday++;
             }
         });
-        if (sumOfEventsToday == 0)
+        if (sumOfEventsToday === 0)
             process.stdout.write("no events today");
     }
     clearPreEvents() {
